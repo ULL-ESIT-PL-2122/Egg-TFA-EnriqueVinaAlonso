@@ -1,0 +1,11 @@
+TypeError: Applying not a function or method TypeError: Evaluating properties for Object "[1,2,3]" properties: "["hi"]"
+    at Apply.evaluate (/home/usuario/practicas/extended-egg-juan-garcia-santos-alu0101325583/lib/ast.js:74:13)
+    at /home/usuario/practicas/extended-egg-juan-garcia-santos-alu0101325583/lib/eggvm.js:48:17
+    at Array.forEach (<anonymous>)
+    at Object.specialForms.do (/home/usuario/practicas/extended-egg-juan-garcia-santos-alu0101325583/lib/eggvm.js:47:8)
+    at Apply.evaluate (/home/usuario/practicas/extended-egg-juan-garcia-santos-alu0101325583/lib/ast.js:63:46)
+    at runFromFile (/home/usuario/practicas/extended-egg-juan-garcia-santos-alu0101325583/lib/eggvm.js:291:23)
+    at Command.<anonymous> (/home/usuario/practicas/extended-egg-juan-garcia-santos-alu0101325583/bin/egg.js:16:13)
+    at Command.listener [as _actionHandler] (/home/usuario/practicas/extended-egg-juan-garcia-santos-alu0101325583/node_modules/commander/lib/command.js:481:17)
+    at /home/usuario/practicas/extended-egg-juan-garcia-santos-alu0101325583/node_modules/commander/lib/command.js:1237:65
+    at Command._chainOrCall (/home/usuario/practicas/extended-egg-juan-garcia-santos-alu0101325583/node_modules/commander/lib/command.js:1153:12)

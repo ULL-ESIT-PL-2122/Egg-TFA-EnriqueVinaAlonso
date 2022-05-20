@@ -1,0 +1,11 @@
+SyntaxError: Bad use of set '[{"type":"word","name":"x"},{"type":"value","value":1},{"type":"value","value":2}]'
+    at Object.specialForms.=.specialForms.set (/Users/casianorodriguezleon/campus-virtual/shared/egg/eloquentjsegg/lib/eggvm.js:114:11)
+    at Apply.evaluate (/Users/casianorodriguezleon/campus-virtual/shared/egg/eloquentjsegg/lib/ast.js:71:46)
+    at /Users/casianorodriguezleon/campus-virtual/shared/egg/eloquentjsegg/lib/eggvm.js:60:17
+    at Array.forEach (<anonymous>)
+    at Object.specialForms.do (/Users/casianorodriguezleon/campus-virtual/shared/egg/eloquentjsegg/lib/eggvm.js:59:8)
+    at Apply.evaluate (/Users/casianorodriguezleon/campus-virtual/shared/egg/eloquentjsegg/lib/ast.js:71:46)
+    at run (/Users/casianorodriguezleon/campus-virtual/shared/egg/eloquentjsegg/lib/eggvm.js:272:15)
+    at runFromFile (/Users/casianorodriguezleon/campus-virtual/shared/egg/eloquentjsegg/lib/eggvm.js:278:12)
+    at Object.<anonymous> (/Users/casianorodriguezleon/campus-virtual/shared/egg/eloquentjsegg/bin/egg.js:7:67)
+    at Module._compile (node:internal/modules/cjs/loader:1108:14)

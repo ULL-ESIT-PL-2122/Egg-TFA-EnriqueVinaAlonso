@@ -1,0 +1,12 @@
+node_modules
+*.evm
+egg
+egg-carlos
+alus-egg-1/
+alus-egg-2/
+alus-egg-3/
+alus-egg-4/
+carlos-egg-4
+davafons-p6
+davafons-tfa*
+.DS_Store
