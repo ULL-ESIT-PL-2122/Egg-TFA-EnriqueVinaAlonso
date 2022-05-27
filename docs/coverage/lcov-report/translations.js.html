@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for j2a.js</title>
+    <title>Code coverage report for translations.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> j2a.js</h1>
+        <h1><a href="index.html">All files</a> translations.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>23/23</span>
+                <span class='fraction'>9/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">14.28% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>1/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>21/21</span>
+                <span class='fraction'>9/9</span>
             </div>
         
             
@@ -88,75 +88,57 @@
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a>
-<a name='L31'></a><a href='#L31'>31</a>
-<a name='L32'></a><a href='#L32'>32</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">423x</span>
-<span class="cline-any cline-yes">423x</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">423x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">691x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">916x</span>
-<span class="cline-any cline-yes">470x</span>
-<span class="cline-any cline-yes">470x</span>
-<span class="cline-any cline-yes">470x</span>
-<span class="cline-any cline-yes">470x</span>
-<span class="cline-any cline-yes">470x</span>
-<span class="cline-any cline-yes">470x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">147x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">147x</span>
-<span class="cline-any cline-yes">147x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">const {j2a, json2AST, topEnv} = require("./registry.js");
-const {Value, Word, Apply, Property} = require("./ast.js");
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">let generateJSForms = Object.create(null);
 &nbsp;
-j2a['value'] = (j) =&gt; { 
-  let obj = new Value(j);
-  if (typeof obj.value === "object") {
-    obj.value = new topEnv[obj.value.type](...obj.value.info);
-  }
-  return obj;
-};
-j2a['word']  = (j) =&gt; new Word(j);
-j2a['apply'] = (j) =&gt; {
-  let args = j.args.map( arg =&gt; json2AST(arg));
-  let operator = json2AST(j.operator);
-  let apply = {};
-  apply.type = 'apply';
-  apply.operator = operator;
-  apply.args = args;
-  return new Apply(apply);
-};
-&nbsp;
-j2a['property'] = (j) =&gt; {
-  let obj = {
-    type: 'property',
-    args: [],
-    operator: json2AST(j.operator),
+['+', '-', '*', '/', '==', '&lt;', '&gt;', '&amp;&amp;', '||' ].forEach(op =&gt; {
+    generateJSForms[op] = <span class="fstat-no" title="function not covered" >fu</span>nction(args, scope) {
+    }
+  });
+  
+  generateJSForms["print"] = <span class="fstat-no" title="function not covered" >fu</span>nction(args, scope) {
   };
-  obj.args = j.args.map(json2AST);
-  return new Property(obj);
-};
+  
+  generateJSForms["do"] = <span class="fstat-no" title="function not covered" >fu</span>nction(args, scope) {
+  };
+  
+  generateJSForms["fun"] = generateJSForms["-&gt;"] = <span class="fstat-no" title="function not covered" >fu</span>nction(args, scope) {
+  };
+  
+  generateJSForms["="] = generateJSForms["set"] = <span class="fstat-no" title="function not covered" >fu</span>nction(args, scope) {
+  };
+  
+  generateJSForms[':='] = 
+  generateJSForms['def'] = 
+  generateJSForms['define'] = <span class="fstat-no" title="function not covered" >fu</span>nction(args, scope) {
+  };
+  
 &nbsp;
-module.exports = { j2a, json2AST };</pre></td></tr></table></pre>
+module.exports = { generateJSForms };</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
