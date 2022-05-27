@@ -1,9 +1,2 @@
-[
-  {
-    type: 'apply',
-    operator: { type: 'word', line: 2, col: 1, length: 2, name: 'do' },
-    args: [ [Object], [Object], [Object] ]
-  }
-]
 inside module
 5

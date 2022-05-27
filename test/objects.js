@@ -61,15 +61,7 @@ describe("Testing Egg objects functions", function() {
     done();
   });
 
-  it("testing dot-obj-2.egg", function(done) {
-    const filename = 'dot-obj-2';
-    
-    const program = fs.readFileSync('test/examples/'+ filename +'.egg', 'utf8');
-    const expected = fs.readFileSync('test/examples/'+ filename +'.egg.expected', 'utf-8').split("\n");
-    const r = eggvm.run(program);    
-    output.should.be.deepEqual(expected);
-    done();
-  });
+
 
   it("testing objects-set.egg", function(done) {
     const filename = 'objects-set';
@@ -92,14 +84,5 @@ describe("Testing Egg objects functions", function() {
   });
 
 
-  it("testing  bind.egg", function(done) {
-    const filename = 'bind';
-    
-    const program = fs.readFileSync('test/examples/'+ filename +'.egg', 'utf8');
-    const expected = fs.readFileSync('test/examples/'+ filename +'.egg.expected', 'utf-8').split("\n");
-    const r = eggvm.run(program);    
-    output.should.be.deepEqual(expected);
-    done();
-  });
 
 });
