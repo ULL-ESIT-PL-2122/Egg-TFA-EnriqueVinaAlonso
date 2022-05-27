@@ -31,7 +31,8 @@
     "should": "^13.2.3",
     "sinon": "^7.3.1",
     "test-console": "^1.1.0",
-    "nyc": "latest"
+    "nyc": "latest",
+    "js-beautify": "latest"
   },
   "dependencies": {
     "nearley": "latest",
