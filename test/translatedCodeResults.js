@@ -48,4 +48,69 @@ describe("Testing that the translated js code returns the same as the original",
     expect(jsOutput).to.deep.equal(eggOutput);
     done();
   });
+
+  it("testing if.egg", function(done) {
+    const filename = 'if';
+    
+    const program = fs.readFileSync('test/compileToJS-tests/'+ filename +'.egg', 'utf8');
+    eggvm.run(program);    
+    const eggOutput = output.map(x => x.toString());
+    output = [];
+
+    const jsprogram = compileToJsAndBeautify('test/compileToJS-tests/'+ filename +'.egg');
+    eval(jsprogram);
+    const jsOutput = output.map(x => x.toString());
+
+    expect(jsOutput).to.deep.equal(eggOutput);
+    done();
+  });
+
+  it("testing fun.egg", function(done) {
+    const filename = 'fun';
+    
+    const program = fs.readFileSync('test/compileToJS-tests/'+ filename +'.egg', 'utf8');
+    eggvm.run(program);    
+    const eggOutput = output.map(x => x.toString());
+    output = [];
+
+    const jsprogram = compileToJsAndBeautify('test/compileToJS-tests/'+ filename +'.egg');
+    eval(jsprogram);
+    const jsOutput = output.map(x => x.toString());
+
+    expect(jsOutput).to.deep.equal(eggOutput);
+    done();
+  });
+
+  it("testing set.egg", function(done) {
+    const filename = 'set';
+    
+    const program = fs.readFileSync('test/compileToJS-tests/'+ filename +'.egg', 'utf8');
+    eggvm.run(program);    
+    const eggOutput = output.map(x => x.toString());
+    output = [];
+
+    const jsprogram = compileToJsAndBeautify('test/compileToJS-tests/'+ filename +'.egg');
+    eval(jsprogram);
+    const jsOutput = output.map(x => x.toString());
+
+    expect(jsOutput).to.deep.equal(eggOutput);
+    done();
+  });
+
+  it("testing sum.egg", function(done) {
+    const filename = 'sum';
+    
+    const program = fs.readFileSync('test/compileToJS-tests/'+ filename +'.egg', 'utf8');
+    eggvm.run(program);    
+    const eggOutput = output.map(x => x.toString());
+    output = [];
+
+    const jsprogram = compileToJsAndBeautify('test/compileToJS-tests/'+ filename +'.egg');
+    eval(jsprogram);
+    const jsOutput = output.map(x => x.toString());
+
+    expect(jsOutput).to.deep.equal(eggOutput);
+    done();
+  });
+
 });
