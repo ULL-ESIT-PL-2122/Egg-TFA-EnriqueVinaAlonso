@@ -11,6 +11,7 @@ const jsBeautifyConfig = {
   preserve_newlines: false
 }
 
+
 const compileToJsAndBeautify = (eggFile) => {
   let compiledJS = `
     const path = require('path');
@@ -52,3 +53,4 @@ program
 program.parse(process.argv);
 
 
+module.exports = { compileToJsAndBeautify};

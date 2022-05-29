@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for j2a.js</title>
+    <title>Code coverage report for lib/scope.js</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="prettify.css" />
-    <link rel="stylesheet" href="base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(sort-arrow-sprite.png);
+            background-image: url(../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> j2a.js</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">lib</a> scope.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">83.33% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>23/23</span>
+                <span class='fraction'>10/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>4/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">83.33% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>21/21</span>
+                <span class='fraction'>10/12</span>
             </div>
         
             
@@ -90,89 +90,77 @@
 <a name='L25'></a><a href='#L25'>25</a>
 <a name='L26'></a><a href='#L26'>26</a>
 <a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a>
-<a name='L31'></a><a href='#L31'>31</a>
-<a name='L32'></a><a href='#L32'>32</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L28'></a><a href='#L28'>28</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">371x</span>
-<span class="cline-any cline-yes">371x</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">371x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">620x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">819x</span>
-<span class="cline-any cline-yes">417x</span>
-<span class="cline-any cline-yes">417x</span>
-<span class="cline-any cline-yes">417x</span>
-<span class="cline-any cline-yes">417x</span>
-<span class="cline-any cline-yes">417x</span>
-<span class="cline-any cline-yes">417x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">123x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">123x</span>
-<span class="cline-any cline-yes">123x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">const {j2a, json2AST, topEnv} = require("./registry.js");
-const {Value, Word, Apply, Property} = require("./ast.js");
-&nbsp;
-j2a['value'] = (j) =&gt; { 
-  let obj = new Value(j);
-  if (typeof obj.value === "object") {
-    obj.value = new topEnv[obj.value.type](...obj.value.info);
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">function setAsUsed(scope, name) {
+  if (!scope[name]) {
+    scope[name] = { declared: false };
   }
-  return obj;
-};
-j2a['word']  = (j) =&gt; new Word(j);
-j2a['apply'] = (j) =&gt; {
-  let args = j.args.map( arg =&gt; json2AST(arg));
-  let operator = json2AST(j.operator);
-  let apply = {};
-  apply.type = 'apply';
-  apply.operator = operator;
-  apply.args = args;
-  return new Apply(apply);
-};
+  scope[name].used = true;
+  return scope[name];
+}
 &nbsp;
-j2a['property'] = (j) =&gt; {
-  let obj = {
-    type: 'property',
-    args: [],
-    operator: json2AST(j.operator),
-  };
-  obj.args = j.args.map(json2AST);
-  return new Property(obj);
-};
+function setAsDeclared(scope, name) {
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (!scope[name]) {
+<span class="cstat-no" title="statement not covered" >    scope[name] = { declared: true };</span>
+  }
+  scope[name].declared = true;
+  return scope[name];
+}
 &nbsp;
-module.exports = { j2a, json2AST };</pre></td></tr></table></pre>
+function checkDeclarationsIn(localScope, message) {
+  Object.keys(localScope).forEach((key) =&gt; {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (!localScope[key].declared) {
+      //console.warn
+<span class="cstat-no" title="statement not covered" >      throw new TypeError(`Variable "${key.slice(1)}" is not declared. ${message ? message : ""}`);</span>
+    }
+  })
+}
+&nbsp;
+&nbsp;
+&nbsp;
+module.exports = { setAsUsed, setAsDeclared, checkDeclarationsIn };</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Sun May 29 2022 21:31:56 GMT+0000 (Coordinated Universal Time)
+                at Sun May 29 2022 21:35:29 GMT+0000 (Coordinated Universal Time)
             </div>
-        <script src="prettify.js"></script>
+        <script src="../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="sorter.js"></script>
-        <script src="block-navigation.js"></script>
+        <script src="../sorter.js"></script>
+        <script src="../block-navigation.js"></script>
     </body>
 </html>
     

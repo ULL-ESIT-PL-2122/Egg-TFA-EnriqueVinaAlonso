@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for j2a.js</title>
+    <title>Code coverage report for lib/registry.js</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="prettify.css" />
-    <link rel="stylesheet" href="base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(sort-arrow-sprite.png);
+            background-image: url(../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> j2a.js</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">lib</a> registry.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">85.71% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>23/23</span>
+                <span class='fraction'>12/14</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">88.88% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>8/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>2/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">92.3% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>21/21</span>
+                <span class='fraction'>12/13</span>
             </div>
         
             
@@ -86,93 +86,69 @@
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a>
-<a name='L31'></a><a href='#L31'>31</a>
-<a name='L32'></a><a href='#L32'>32</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">371x</span>
-<span class="cline-any cline-yes">371x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">371x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">620x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">819x</span>
-<span class="cline-any cline-yes">417x</span>
-<span class="cline-any cline-yes">417x</span>
-<span class="cline-any cline-yes">417x</span>
-<span class="cline-any cline-yes">417x</span>
-<span class="cline-any cline-yes">417x</span>
-<span class="cline-any cline-yes">417x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">123x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1548x</span>
+<span class="cline-any cline-yes">1548x</span>
+<span class="cline-any cline-yes">1548x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">225x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">123x</span>
-<span class="cline-any cline-yes">123x</span>
+<span class="cline-any cline-yes">225x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">const {j2a, json2AST, topEnv} = require("./registry.js");
-const {Value, Word, Apply, Property} = require("./ast.js");
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const inspect = require('util').inspect;
+const ins = <span class="fstat-no" title="function not covered" >(x</span>) =&gt; <span class="cstat-no" title="statement not covered" >inspect(x, {depth: 2});</span>
+let specialForms = Object.create(null); // Egg objects don't inherit from Object if create(null)
+let topEnv = Object.create(null);
 &nbsp;
-j2a['value'] = (j) =&gt; { 
-  let obj = new Value(j);
-  if (typeof obj.value === "object") {
-    obj.value = new topEnv[obj.value.type](...obj.value.info);
+// From JSON to AST map
+let j2a = Object.create(null);
+function json2AST(node) { // Generic JSON traversing building the AST
+  <span class="missing-if-branch" title="else path not taken" >E</span>if( node &amp;&amp; node.type &amp;&amp; node.type in j2a ) {
+    const object = j2a[node.type](node);
+    return object;
   }
-  return obj;
-};
-j2a['word']  = (j) =&gt; new Word(j);
-j2a['apply'] = (j) =&gt; {
-  let args = j.args.map( arg =&gt; json2AST(arg));
-  let operator = json2AST(j.operator);
-  let apply = {};
-  apply.type = 'apply';
-  apply.operator = operator;
-  apply.args = args;
-  return new Apply(apply);
-};
+<span class="cstat-no" title="statement not covered" >  throw new Error(`Unknown node type ${ins(node)}`);</span>
+}
+ 
+function checkNegativeIndex(obj, element) {
+  if (Array.isArray(obj) &amp;&amp;  element &lt; 0 ) {
+    element += obj.length;
+  }
+  return element;
+}
 &nbsp;
-j2a['property'] = (j) =&gt; {
-  let obj = {
-    type: 'property',
-    args: [],
-    operator: json2AST(j.operator),
-  };
-  obj.args = j.args.map(json2AST);
-  return new Property(obj);
-};
-&nbsp;
-module.exports = { j2a, json2AST };</pre></td></tr></table></pre>
+module.exports = {specialForms, topEnv, j2a, json2AST, checkNegativeIndex};
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Sun May 29 2022 21:31:56 GMT+0000 (Coordinated Universal Time)
+                at Sun May 29 2022 21:35:29 GMT+0000 (Coordinated Universal Time)
             </div>
-        <script src="prettify.js"></script>
+        <script src="../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="sorter.js"></script>
-        <script src="block-navigation.js"></script>
+        <script src="../sorter.js"></script>
+        <script src="../block-navigation.js"></script>
     </body>
 </html>
     
