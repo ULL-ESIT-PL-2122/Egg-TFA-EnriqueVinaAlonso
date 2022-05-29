@@ -33,7 +33,7 @@ describe("Testing eval and state meta properties from Egg", function() {
 
 
   it("testing specialform-property.egg", function(done) {
-    const filename = 'curry-method';
+    const filename = 'specialform-property';
     
     const program = fs.readFileSync('test/examples/'+ filename +'.egg', 'utf8');
     const expected = fs.readFileSync('test/examples/'+ filename +'.egg.expected', 'utf-8').split("\n");
