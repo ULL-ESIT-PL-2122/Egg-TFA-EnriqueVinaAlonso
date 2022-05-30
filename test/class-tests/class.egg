@@ -1,0 +1,15 @@
+do(
+    class( point, 
+        x: 0,
+        y: 0, 
+    moveUp: fun(
+                def(
+                    self["y"],
+                    +(self["y"], 1)
+                )                
+            )
+    ),
+    def(a, point.new()),
+    a.moveUp(),
+    print(a.y)
+)
