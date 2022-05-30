@@ -145,5 +145,20 @@ describe("Testing that the translated js code returns the same as the original",
     done();
   });
 
+  it("testing array.egg", function(done) {
+    const filename = 'array';
+    
+    const program = fs.readFileSync('test/compileToJS-tests/'+ filename +'.egg', 'utf8');
+    eggvm.run(program);    
+    const eggOutput = output.map(x => x.toString());
+    output = [];
+
+    const jsprogram = compileToJsAndBeautify('test/compileToJS-tests/'+ filename +'.egg');
+    eval(jsprogram);
+    const jsOutput = output.map(x => x.toString());
+
+    expect(jsOutput).to.deep.equal(eggOutput);
+    done();
+  });
 
 });
