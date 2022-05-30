@@ -16,4 +16,3 @@ do (
   print(x["sc"](6)),       # 6
   print(x.gc())            # 6
 )
-
