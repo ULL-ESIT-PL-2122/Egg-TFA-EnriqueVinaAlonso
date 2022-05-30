@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">77% </span>
+                <span class="strong">78% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>77/100</span>
+                <span class='fraction'>78/100</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">69.56% </span>
+                <span class="strong">73.91% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>32/46</span>
+                <span class='fraction'>34/46</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">77.77% </span>
+                <span class="strong">78.88% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>70/90</span>
+                <span class='fraction'>71/90</span>
             </div>
         
             
@@ -261,12 +261,14 @@
 <a name='L196'></a><a href='#L196'>196</a>
 <a name='L197'></a><a href='#L197'>197</a>
 <a name='L198'></a><a href='#L198'>198</a>
-<a name='L199'></a><a href='#L199'>199</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L199'></a><a href='#L199'>199</a>
+<a name='L200'></a><a href='#L200'>200</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">431x</span>
@@ -285,10 +287,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">20x</span>
 <span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -322,9 +324,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">24x</span>
-<span class="cline-any cline-yes">24x</span>
-<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -363,10 +365,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-yes">45x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">36x</span>
-<span class="cline-any cline-yes">35x</span>
+<span class="cline-any cline-yes">41x</span>
+<span class="cline-any cline-yes">40x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -394,7 +396,7 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -453,8 +455,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -465,6 +467,7 @@ const ins = <span class="fstat-no" title="function not covered" >(x</span>) =&gt
 const { json2AST, specialForms, checkNegativeIndex } = require("./registry.js");
 const { setAsUsed } = require('./scope.js');
 const { generateJSForms } = require('./translations.js');
+&nbsp;
 class Value {
   constructor(token) {
     this.type = token.type;
@@ -561,7 +564,7 @@ class Apply {
   }
 &nbsp;
   generateJS(scope) {
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (this.operator.type === 'word') {
+    if (this.operator.type === 'word') {
       //comprobamos si es una función de egg
       if (generateJSForms[this.operator.name]) {
         return generateJSForms[this.operator.name](this.args, scope);
@@ -592,7 +595,7 @@ class Apply {
 <span class="cstat-no" title="statement not covered" >          process.exit(0);</span>
         }
       }
-    } else <span class="cstat-no" title="statement not covered" >if (this.operator.type == 'apply') {</span>
+    } else <span class="missing-if-branch" title="if path not taken" >I</span>if (this.operator.type == 'apply') {
       let argsTranslated = <span class="cstat-no" title="statement not covered" >this.args.map(<span class="fstat-no" title="function not covered" >ar</span>g =&gt; <span class="cstat-no" title="statement not covered" >arg.generateJS(scope))</span>;</span>
 <span class="cstat-no" title="statement not covered" >      return `${this.operator.generateJS(scope)}(${argsTranslated})`;</span>
     }
@@ -650,9 +653,9 @@ class Property {
     return [left, ...leftIndex];
   }
 &nbsp;
-  generateJS() {
-    let left = this.operator.name == 'self' ?  'this' : this.operator.generateJS();
-    return left + '.' + this.args.map(arg =&gt; arg.generateJS()).join('.');
+  generateJS(scope) {
+    let left = this.operator.name == 'self' ?  'this' : this.operator.generateJS(scope);
+    return left + '[' + this.args.map(arg =&gt; arg.generateJS()).join('.') + ']';
   }
 }
 &nbsp;
@@ -664,7 +667,7 @@ module.exports = { Value, Word, Apply, Property };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon May 30 2022 12:10:37 GMT+0000 (Coordinated Universal Time)
+                at Mon May 30 2022 13:11:43 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../prettify.js"></script>
         <script>

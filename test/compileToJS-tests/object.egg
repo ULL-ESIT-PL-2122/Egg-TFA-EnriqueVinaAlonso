@@ -6,13 +6,10 @@ do (
     inc: ->(=(self["c"], +(self["c"], 1)))
   )),
   print(x),
-  print(x["c"]),           # 0
-  print(x.c),              # 0
-  print(x.gc()),           # 0 
-  #print(element(x, "gc")), # [Function: bound ]
-  #print(x["sub"]("gc")),   # [Function: bound ]
-  #print(x.sub("gc")),      # [Function: bound ]
-  print(x.sc(5)),          # 5
-  print(x["sc"](6)),       # 6
-  print(x.gc())            # 6
+  print(x["c"]),           
+  print(x.c),              
+  print(x.gc()),            
+  print(x.sc(5)),          
+  print(x["sc"](6)),       
+  print(x.gc())            
 )
