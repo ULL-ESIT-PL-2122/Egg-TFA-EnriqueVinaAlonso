@@ -5,7 +5,6 @@ do (
     sc:  ->(value, =(self["c"], value)),
     inc: ->(=(self["c"], +(self["c"], 1)))
   )),
-  print(x),
   print(x["c"]),           
   print(x.c),              
   print(x.gc()),            
