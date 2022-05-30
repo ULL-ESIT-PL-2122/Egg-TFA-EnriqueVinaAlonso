@@ -7,9 +7,16 @@ do(
                     self["y"],
                     +(self["y"], 1)
                 )                
+            ),
+    constructor: fun(x, y, 
+            do(
+                def(self["x"], x),
+                def(self["y"], y)
             )
+        )
     ),
-    def(a, point.new()),
+    def(a, point.new(5, 5)),    
+    print(a.y),
     a.moveUp(),
     print(a.y)
 )
