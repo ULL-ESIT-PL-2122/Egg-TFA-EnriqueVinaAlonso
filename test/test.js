@@ -19,7 +19,6 @@ describe("run", function() {
   beforeEach(function() {
     originalLog = console.log;
     console.log = function (...args) { 
-      originalLog(...args); 
       output.push(...args);
       return args; 
     };

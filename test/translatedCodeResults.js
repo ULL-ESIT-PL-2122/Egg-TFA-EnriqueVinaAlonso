@@ -20,7 +20,6 @@ describe("Testing that the translated js code returns the same as the original",
   beforeEach(function() {
     originalLog = console.log;
     console.log = function (...args) { 
-      originalLog(...args); 
       output.push(...args);
       return args; 
     };

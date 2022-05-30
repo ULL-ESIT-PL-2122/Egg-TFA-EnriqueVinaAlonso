@@ -13,13 +13,12 @@ const {Value, Word, Apply} = require("../lib/ast.js");
 var eggvm = require('../lib/eggvm.js');
 
 
-describe("Testing Egg objects functions", function() {
+describe("Testing Egg classes", function() {
   let originalLog;
   let output = [];
   beforeEach(function() {
     originalLog = console.log;
-    console.log = function (...args) { 
-      originalLog(...args); 
+    console.log = function (...args) {   
       output.push(...args);
       return args; 
     };
