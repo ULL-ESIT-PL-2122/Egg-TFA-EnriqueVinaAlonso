@@ -3,15 +3,15 @@ do(
         x: 0,
         y: 0, 
     moveUp: fun(
-                def(
+                =(
                     self["y"],
                     +(self["y"], 1)
                 )                
             ),
     constructor: fun(x, y, 
             do(
-                def(self["x"], x),
-                def(self["y"], y)
+                =(self["x"], x),
+                =(self["y"], y)
             )
         )
     ),
