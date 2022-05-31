@@ -86,8 +86,81 @@ Para traducir una clase en JS, se añadieron los siguientes ficheros:
 - `scope.js`: contine funciones de utilidad para el manejo de las variables y entornos.
 - `translations.js`: continene las funciones de traducción de las expresiones en js.
 
-### Traducción de funciones
+### Modificación de las clases nodos del AST
+Para facilitar la tarea de traducción se le añadirá a cada una de las clases un método `generateJS` que retornará una string con el código equivalente en JS.
 
+#### Nodo `Value`
+```js
+  generateJS() {
+    if (typeof this.value === 'number') {
+      return this.value;
+    }
+    return `'${this.value}'`;
+  }
+
+```
+Simplemente devolveremos el valor del nodo.
+
+#### Nodo `Word`
+```js
+  generateJS(scope) {
+    let eggName = '$' + this.name;
+    setAsUsed(scope, eggName);
+    return eggName;
+  }
+```
+En la traducción de un nodo `Word` se generará un nombre precedido con un símbolo especial para identificar las variables de usuario (en este caso `$`),
+además se maracará esta variable como usada.
+
+#### Nodo `Apply`
+```js
+  generateJS(scope) {
+    if (this.operator.type === 'word') {
+      //comprobamos si es una función de egg
+      if (generateJSForms[this.operator.name]) {
+        return generateJSForms[this.operator.name](this.args, scope);
+      }
+      else {
+        let opTranslation = this.operator.generateJS(scope);
+        // si ha sido declarado
+        if (opTranslation && scope[opTranslation].declared) {
+          let argsTranslated = this.args.map(arg => arg.generateJS(scope));
+          return `${opTranslation}(${argsTranslated})`;
+        }
+        // si no está declarado, damos un warning, error si es un special forms
+        else if (opTranslation && !scope[opTranslation].declared) {
+          if (this.operator.name in specialForms) {
+            let errorMsg = `Translation of "${this.operator.name}" not implemented yet.\n`;
+            console.error(errorMsg);
+            process.exit(1);
+          }
+          console.warn(`Warning: Non declared symbol "${this.operator.name}" used as function.\n`);
+          let argsTranslated = this.args.map(arg => arg.generateJS(scope));
+          return `${opTranslation}(${argsTranslated})`;
+        }
+
+        else {
+          let errMsg = `Fatal error.\n` +
+            `AST=${JSON.stringify(this)}.\nscope=${JSON.stringify(scope)}.\n`;
+          console.error(errMsg);
+          process.exit(0);
+        }
+      }
+    } else if (this.operator.type == 'apply') {
+      let argsTranslated = this.args.map(arg => arg.generateJS(scope));
+      return `${this.operator.generateJS(scope)}(${argsTranslated})`;
+    }
+    else if (this.operator.type == 'property') {
+      let opTranslation = this.operator.generateJS(scope);
+      let argsTranslated = this.args.map(arg => arg.generateJS(scope));
+      return `${opTranslation}(${argsTranslated})`;
+    }
+  }
+```
+
+La traducción de un nodo `Apply` es mucho más compleja en comparación con el resto de nodos.
+
+### Traducción de funciones
 #### fun
 
 ```javascript
