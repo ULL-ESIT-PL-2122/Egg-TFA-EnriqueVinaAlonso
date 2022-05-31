@@ -36,16 +36,30 @@ module.exports = {
       {
         text: 'Guide',
         link: '/guide/',
-      },
-      {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
-      }
+      }  
     ],
     sidebar: {
       '/guide/': [
         {
           title: 'Guide',
+          collapsable: false,
+          children: [
+            '',
+          ]
+        }
+      ],
+      '/Clases/': [
+        {
+          title: 'Clases',
+          collapsable: false,
+          children: [
+            '',
+          ]
+        }
+      ],
+      '/Traducciones/': [
+        {
+          title: 'Traducciones',
           collapsable: false,
           children: [
             '',
