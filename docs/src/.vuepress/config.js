@@ -32,22 +32,9 @@ module.exports = {
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
-    nav: [
-      {
-        text: 'Guide',
-        link: '/guide/',
-      }  
+    nav: [ 
     ],
     sidebar: {
-      '/guide/': [
-        {
-          title: 'Guide',
-          collapsable: false,
-          children: [
-            '',
-          ]
-        }
-      ],
       '/Clases/': [
         {
           title: 'Clases',
