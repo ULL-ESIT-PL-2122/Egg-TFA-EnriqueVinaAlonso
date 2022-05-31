@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>EGGXTENDED | Vuepress Docs Boilerplate</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/tfa-enrique-vina-alonso-alu0101337760/report/assets/css/0.styles.d2c0b82c.css" as="style"><link rel="preload" href="/tfa-enrique-vina-alonso-alu0101337760/report/assets/js/app.a713ba81.js" as="script"><link rel="preload" href="/tfa-enrique-vina-alonso-alu0101337760/report/assets/js/2.eb6e313d.js" as="script"><link rel="preload" href="/tfa-enrique-vina-alonso-alu0101337760/report/assets/js/10.57becd1d.js" as="script"><link rel="prefetch" href="/tfa-enrique-vina-alonso-alu0101337760/report/assets/js/11.257a49c6.js"><link rel="prefetch" href="/tfa-enrique-vina-alonso-alu0101337760/report/assets/js/12.76873075.js"><link rel="prefetch" href="/tfa-enrique-vina-alonso-alu0101337760/report/assets/js/3.26b72fda.js"><link rel="prefetch" href="/tfa-enrique-vina-alonso-alu0101337760/report/assets/js/4.1d50d501.js"><link rel="prefetch" href="/tfa-enrique-vina-alonso-alu0101337760/report/assets/js/5.6df2c662.js"><link rel="prefetch" href="/tfa-enrique-vina-alonso-alu0101337760/report/assets/js/6.d7e152ce.js"><link rel="prefetch" href="/tfa-enrique-vina-alonso-alu0101337760/report/assets/js/7.0404d379.js"><link rel="prefetch" href="/tfa-enrique-vina-alonso-alu0101337760/report/assets/js/8.c1708cdf.js"><link rel="prefetch" href="/tfa-enrique-vina-alonso-alu0101337760/report/assets/js/9.54764661.js">
+    <link rel="stylesheet" href="/tfa-enrique-vina-alonso-alu0101337760/report/assets/css/0.styles.d2c0b82c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/tfa-enrique-vina-alonso-alu0101337760/report/" class="home-link router-link-active"><!----> <span class="site-name">Vuepress Docs Boilerplate</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/tfa-enrique-vina-alonso-alu0101337760/report/guide/" class="nav-link">
+  Guide
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/tfa-enrique-vina-alonso-alu0101337760/report/guide/" class="nav-link">
+  Guide
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Clases</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/tfa-enrique-vina-alonso-alu0101337760/report/Clases/" aria-current="page" class="active sidebar-link">EGGXTENDED</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/tfa-enrique-vina-alonso-alu0101337760/report/Clases/#clases-en-egg" class="sidebar-link">Clases en egg:</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="eggxtended"><a href="#eggxtended" class="header-anchor">#</a> EGGXTENDED</h1> <p><a href="/tfa-enrique-vina-alonso-alu0101337760/report/coverage/lcov-report/">COVERAGE</a></p> <h2 id="clases-en-egg"><a href="#clases-en-egg" class="header-anchor">#</a> Clases en egg:</h2> <h3 id="idea-principal"><a href="#idea-principal" class="header-anchor">#</a> Idea principal</h3> <p>La lógica a seguir para implmenter una clase en egg es bastante similar a la que ya hemos seguido para implementar objetos, la diferencia es que la declaración de una clase creará un objeto en el entorno dado que almacene cada una de las properties de la clase, de forma similar a un objeto. La principal diferencia es que este objeto definición de clase tendrá un método <code>new</code> que permitirá crear una instancia de la clase.</p> <h3 id="sintaxis"><a href="#sintaxis" class="header-anchor">#</a> Sintaxis</h3> <p>La sintaxis propuesta es la siguiente:</p> <div class="language-egg extra-class"><pre class="language-text"><code>class( point, 
+    x: 0,
+    y: 0, 
+    moveUp: fun(
+            =(
+                self[&quot;y&quot;],
+                +(self[&quot;y&quot;], 1)
+            )                
+        ),
+    constructor: fun(x, y, 
+        do(
+            =(self[&quot;x&quot;], x),
+            =(self[&quot;y&quot;], y)
+        )
+    )
+)
+</code></pre></div><p>El primer parámetro de <code>class</code> será un nombre de clase, luego se definirán las propiedades de la clase.
+Además no es necesario que la clase tenga un constructor, se puede simplmemente definir los valores por defecto a cada atributo.</p> <h3 id="implementacion"><a href="#implementacion" class="header-anchor">#</a> Implementación</h3> <p>La implmentación prouesta es la siguiente:</p> <div class="language-js extra-class"><pre class="language-js"><code>specialForms<span class="token punctuation">[</span><span class="token string">'class'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">args<span class="token punctuation">,</span> env</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>args<span class="token punctuation">.</span>length <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">SyntaxError</span><span class="token punctuation">(</span><span class="token string">'Error!: Class number of parameters must be at least 2'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>args<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>type <span class="token operator">!==</span> <span class="token string">'word'</span><span class="token punctuation">)</span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">SyntaxError</span><span class="token punctuation">(</span><span class="token string">'Error!: First parameter must be a word'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">let</span> className <span class="token operator">=</span> args<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+  args<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>args<span class="token punctuation">.</span>length <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">SyntaxError</span><span class="token punctuation">(</span><span class="token string">'Error!: Class must have pairs of property names and property values'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">let</span> propertiesTree <span class="token operator">=</span> args<span class="token punctuation">;</span>
+  <span class="token keyword">let</span> newClass <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  newClass<span class="token punctuation">.</span><span class="token function-variable function">new</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>constructorArgs</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> instanceEnv <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>env<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> instance <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    instanceEnv<span class="token punctuation">[</span><span class="token string">&quot;self&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> instance<span class="token punctuation">;</span>
+    <span class="token keyword">let</span> constructor<span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> propertiesTree<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">+=</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> name <span class="token operator">=</span> propertiesTree<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">getIndex</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">||</span> propertiesTree<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">evaluate</span><span class="token punctuation">(</span>instanceEnv<span class="token punctuation">)</span><span class="token punctuation">;</span>      
+      <span class="token keyword">let</span> value <span class="token operator">=</span> propertiesTree<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">evaluate</span><span class="token punctuation">(</span>instanceEnv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>name <span class="token operator">===</span> <span class="token string">&quot;constructor&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        constructor <span class="token operator">=</span> value<span class="token punctuation">;</span>
+        <span class="token keyword">continue</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      instance<span class="token punctuation">[</span>name<span class="token punctuation">]</span> <span class="token operator">=</span> instanceEnv<span class="token punctuation">[</span>name<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>constructor<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token operator">...</span>constructorArgs<span class="token punctuation">)</span><span class="token punctuation">;</span>      
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  env<span class="token punctuation">[</span>className<span class="token punctuation">]</span> <span class="token operator">=</span> newClass<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Añadiremos una nueva función <code>class</code> a <code>specialForms</code>, las primeras líneas de la función están destinadas a comprobar que los argumentos son correctos, y a la extracción del nombre de la nueva clase a definir. A continuación se definirá un objeto <code>newClass</code> que contendrá un método <code>new</code> que permitirá crear una instancia de la clase.</p> <p>El método new recibirá como argumentos, los parámetros del constructor, si lo hubiese, y creará una nueva instancia de la clase de una forma similar a la ya implementada para los objetos, si se encuentra que la definición de la clase tiene un método constructor mientras se recorren las propiedades de la definición de la clase, este se llama al final de la creación de la instancia.</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/tfa-enrique-vina-alonso-alu0101337760/report/assets/js/app.a713ba81.js" defer></script><script src="/tfa-enrique-vina-alonso-alu0101337760/report/assets/js/2.eb6e313d.js" defer></script><script src="/tfa-enrique-vina-alonso-alu0101337760/report/assets/js/10.57becd1d.js" defer></script>
+  </body>
+</html>
