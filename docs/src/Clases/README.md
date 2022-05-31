@@ -11,7 +11,3 @@
 
 ### Implementación
 
-
-## Traducción de egg a JS:
-
-
