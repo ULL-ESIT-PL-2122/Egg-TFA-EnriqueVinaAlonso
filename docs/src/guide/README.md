@@ -77,3 +77,6 @@ specialForms['class'] = (args, env) => {
 Añadiremos una nueva función `class` a `specialForms`, las primeras líneas de la función están destinadas a comprobar que los argumentos son correctos, y a la extracción del nombre de la nueva clase a definir. A continuación se definirá un objeto `newClass` que contendrá un método `new` que permitirá crear una instancia de la clase.
 
 El método new recibirá como argumentos, los parámetros del constructor, si lo hubiese, y creará una nueva instancia de la clase de una forma similar a la ya implementada para los objetos, si se encuentra que la definición de la clase tiene un método constructor mientras se recorren las propiedades de la definición de la clase, este se llama al final de la creación de la instancia.
+
+
+## Traducción de egg a JS:

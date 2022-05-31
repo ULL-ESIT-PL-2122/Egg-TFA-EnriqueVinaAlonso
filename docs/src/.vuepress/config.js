@@ -35,18 +35,9 @@ module.exports = {
     nav: [ 
     ],
     sidebar: {
-      '/Clases/': [
+      '/guide/': [
         {
-          title: 'Clases',
-          collapsable: false,
-          children: [
-            '',
-          ]
-        }
-      ],
-      '/Traducciones/': [
-        {
-          title: 'Traducciones',
+          title: 'Guide',
           collapsable: false,
           children: [
             '',
