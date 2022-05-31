@@ -146,19 +146,30 @@ además se maracará esta variable como usada.
           process.exit(0);
         }
       }
-    } else if (this.operator.type == 'apply') {
+    } else if (this.operator.type == 'apply' || this.operator.type == 'property') {
       let argsTranslated = this.args.map(arg => arg.generateJS(scope));
       return `${this.operator.generateJS(scope)}(${argsTranslated})`;
-    }
-    else if (this.operator.type == 'property') {
-      let opTranslation = this.operator.generateJS(scope);
-      let argsTranslated = this.args.map(arg => arg.generateJS(scope));
-      return `${opTranslation}(${argsTranslated})`;
     }
   }
 ```
 
-La traducción de un nodo `Apply` es mucho más compleja en comparación con el resto de nodos.
+La traducción de un nodo `Apply` es mucho más compleja en comparación con el resto de nodos. Según el tipo del nodo operator, se traducirá de una forma u otra.
+
+En el caso de que el operador sea `word` se comprueba si es una función de egg, en caso de serlo, se llama a la función correspondiente. 
+En caso contrario, se trata de una función declarada por el usuario, entonces, si la función ha sido declarada, traduciremos el nombre de la función y sus argumentos, si no, generamos un warning.
+
+En el caso de que el operador sea un `apply` o ``property`, se traducen todos los argumentos y se llama a `generateJS` sobre el operador.
+
+#### Nodo `Property`
+```js
+  generateJS(scope) {
+    let left = this.operator.name == 'self' ? 'this' : this.operator.generateJS(scope);
+    return left + '[' + this.args.map(arg => arg.generateJS()).join('.') + ']';
+  }
+```	
+La traducción de un nodo property es bastante simple, simplemente traduciremos la parte izquierda de la propiedad y la parte derecha y devolveremos una string con la sintaxis correcta en js.
+Cabe destacar que en el caso de que la parte izquierda sea `self`, se traducirá como `this`.
+
 
 ### Traducción de funciones
 #### fun
@@ -247,10 +258,6 @@ Para traducir un if, primero comprobaremos que el nodo tiene el número de argum
 #### object
 
 ```js
-generateJSForms['self'] = function (args, scope) {
-  return 'this';
-}
-
 generateJSForms['object'] = function(args, scope) {
   if (args.length % 2) {
     throw new Error("Invalid number of arguments for object");
@@ -270,4 +277,3 @@ generateJSForms['object'] = function(args, scope) {
 ```
 
 La traducción de los objetos es similar a la traducción de un array. En este caso tendremos que traducir los pares de claves y valores asegurandonos de añadir los elementos sintácticos de js. 
-Además añadiremos una función para traducir `self`, que simplemente tiene que ser sustituido por la palabra reservada de js `this`.
