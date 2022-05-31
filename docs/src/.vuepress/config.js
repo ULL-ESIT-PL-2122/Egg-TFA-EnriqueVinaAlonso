@@ -9,7 +9,7 @@ module.exports = {
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
   description: description,
-  base: "/extended-egg-enrique-vina-alonso-alu0101337760/report/",
+  base: "/tfa-enrique-vina-alonso-alu0101337760/report/",
   /**
    * Extra tags to be injected to the page HTML `<head>`
    *
