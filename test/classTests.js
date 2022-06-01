@@ -40,4 +40,14 @@ describe("Testing Egg classes", function() {
     done();
   });
 
+  it("testing class-no-constructor.egg", function(done) {
+    const filename = 'class-no-constructor';
+    
+    const program = fs.readFileSync('test/class-tests/'+ filename +'.egg', 'utf8');
+    const expected = fs.readFileSync('test/class-tests/'+ filename +'.eggpected', 'utf-8').split("\n");
+    const r = eggvm.run(program);    
+    output.should.be.deepEqual(expected);
+    done();
+  });
+
 });
